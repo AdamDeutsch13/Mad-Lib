@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Web Page</title>
+    <link rel="stylesheet" href="mystyle.css">
+
+</head>
+
+<body>
+    <div class="center ">
+        <form id="myForm">
+            <label for="Noun1">Noun:</label><br>
+            <input type="text" id="Noun1" name="frame"><br>
+
+            <br><label for="Adjective1">Adjective:</label><br>
+            <input type="text" id="Adjective1" name="frame"><br>
+
+            <br><label for="Action1">Action: </label><br>
+            <select id="Action1">
+        <option value="jump">Jump</option>
+        <option value="turn">Turn</option>
+        <option value="buzz">Buzz</option>
+        <option value="suck">Suck in</option>
+        <option value="explore">Explore</option>
+    </select> <br>
+
+            <br><label for="Verb1">Verb:</label><br>
+            <input type="text" id="Verb1" name="frame"><br>
+
+            <br> Verb:<br>
+            <input type="radio" id="wink" name="Verb2" value="HTML">
+            <label for="wink">wink</label><br>
+            <input type="radio" id="slide" name="Verb2" value="HTML">
+            <label for="slide">slide</label><br>
+            <input type="radio" id="float" name="Verb2" value="HTML">
+            <label for="float">float</label><br>
+            <input type="radio" id="yodel" name="Verb2" value="HTML">
+            <label for="yodel">yodel</label><br>
+            <input type="radio" id="nurture" name="Verb2" value="HTML">
+            <label for="nurture">nurture</label><br>
+            <input type="radio" id="miss" name="Verb2" value="HTML">
+            <label for="miss">miss</label><br>
+
+            <br><label for="Verb2">Verb:</label><br>
+            <input type="text" id="Verb2" name="frame"><br>
+
+            <br> <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        var form= document.getElementById("myForm");
+    form.addEventListener("submit", function(event){
+    event.preventDefault();
+    var noun1= document.getElementById("Noun1").value;
+    
+    var formContents= document.getElementById("formContentsHere");
+    formContents.innerHTML = "You know " + noun1;
+   
+   });
+    var form= document.getElementById("myForm");
+    form.addEventListener("submit", function(event){
+    event.preventDefault();
+    var adjective1= document.getElementById("Adjective1").value;
+    
+    var formContents= document.getElementById("formContentsHere1");
+    formContents.innerHTML = "moves pretty " + adjective1;
+        
+    });
+    var form= document.getElementById("myForm");
+    form.addEventListener("submit", function(event){
+    event.preventDefault();
+    var action1= document.getElementById("Action1").value;
+    
+    var formContents= document.getElementById("formContentsHere2");
+    formContents.innerHTML = "if you don't " + action1;
+        
+    });
+    var form= document.getElementById("myForm");
+    form.addEventListener("submit", function(event){
+    event.preventDefault();
+    var verb1= document.getElementById("Verb1").value;
+    
+    var formContents= document.getElementById("formContentsHere3");
+    formContents.innerHTML = "and " + verb1 + " around once in a while";
+        
+    });
+    var form= document.getElementById("myForm");
+    form.addEventListener("submit", function(event){
+    event.preventDefault();
+    var verb2= document.getElementById("Verb2").value;
+    
+    var formContents= document.getElementById("formContentsHere4");
+    formContents.innerHTML = "you could " + verb2 + " it";
+
+    });
+    </script>
+    <div class="story color" id="formContentsHere"></div>
+    <div class="story color" id="formContentsHere1"></div>
+    <div class="story color" id="formContentsHere2"></div>
+    <div class="story color" id="formContentsHere3"></div>
+    <div class="story color" id="formContentsHere4"></div>
+
+</body>
+
+</html>
